@@ -1,7 +1,10 @@
-import { useNavigate } from "react-router-dom";
-import { Button } from "../../Components";
+import { useNavigate, useParams } from "react-router-dom";
+import { Button } from "@/Components";
 
 const Employee = () => {
+  const { id } = useParams();
+  const isEditMode = id !== undefined;
+
   const navigate = useNavigate();
 
   const handleCancel = () => {
@@ -10,8 +13,10 @@ const Employee = () => {
 
   return (
     <>
-      <h1>Employee</h1>
-      <Button label="Cancel" color="red-500" onClick={handleCancel}></Button>
+      <h1>Employee {isEditMode ? "(Edit Mode)" : ""}</h1>
+      <Button variant={"destructive"} onClick={handleCancel}>
+        Cancel
+      </Button>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import "./App.css";
-import { Navbar } from "./Components";
-import { CoreRoutes } from "./Routes";
+import { Navbar } from "@/Components";
+import { CoreRoutes } from "@/Routes";
 
 const App = () => {
   return (

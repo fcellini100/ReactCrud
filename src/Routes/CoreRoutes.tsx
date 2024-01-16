@@ -6,7 +6,7 @@ import {
   EmployeeList,
   Home,
   PageNotFound,
-} from "../Pages";
+} from "@/Pages";
 
 const CoreRoutes = () => {
   return (
